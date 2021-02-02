@@ -1,0 +1,34 @@
+{
+  "type": "library",
+  "name": "topi-wechat-cindy/wechat-developer",
+  "license": "MIT",
+  "homepage": "https://github.com/Cindy-lmz/wechat2-developer.git",
+  "keywords": [
+    "WePay",
+    "AliPay",
+    "WeMini",
+    "WeChat",
+    "WeChatPay",
+    "WeChatDeveloper"
+  ],
+  "require": {
+    "php": ">=5.4",
+    "ext-json": "*",
+    "ext-curl": "*",
+    "ext-libxml": "*",
+    "ext-openssl": "*",
+    "ext-mbstring": "*",
+    "ext-simplexml": "*"
+  },
+  "autoload": {
+    "classmap": [
+      "We.php"
+    ],
+    "psr-4": {
+      "WePay\\": "WePay",
+      "WeMini\\": "WeMini",
+      "WeChat\\": "WeChat",
+      "AliPay\\": "AliPay"
+    }
+  }
+}
