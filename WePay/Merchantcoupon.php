@@ -12,7 +12,6 @@ use WeChat\Contracts\Tools;
  */
 class Merchantcoupon extends BasicWePay
 {
-
 	/**
 	 * [addcoupon 创建商户券]
 	 * @param  array  $options [description]
@@ -20,13 +19,39 @@ class Merchantcoupon extends BasicWePay
 	 */
 	public function addcoupon(array $options)
 	{
-
 		$url = "https://api.mch.weixin.qq.com/v3/marketing/busifavor/stocks";
-
 		return $this->callApiv3($url, $options);
-
 	}
-
+    
+    /**
+     * 编辑商家券
+     * @Author Cindy
+     * @E-main cindyli@topichina.com.cn
+     * @param  array                    $options [description]
+     * @param  [type]                   $stock_id [description]
+     * @return [type]                             [description]
+     */
+    public function editcoupon(array $options, $stock_id)
+    {
+        $url = 'https://api.mch.weixin.qq.com/v3/marketing/busifavor/stocks/' . $stock_id;
+        return $this->callApiv3($url, $options, 'PATCH');
+    }
+    
+    /**
+     * 修改批次预算
+     * @Author Cindy
+     * @E-main cindyli@topichina.com.cn
+     * @param  array                    $options [description]
+     * @param  [type]                   $stock_id [description]
+     * @return [type]                             [description]
+     */
+    public function couponbudget(array $options, $stock_id)
+    {
+        $url = 'https://api.mch.weixin.qq.com/v3/marketing/busifavor/stocks/' . $stock_id . '/budget';
+        return $this->callApiv3($url, $options, 'PATCH');
+        
+    }
+    
 	/**
 	 * H5发放代金券
 	 * @param array $options

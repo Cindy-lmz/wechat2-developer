@@ -257,6 +257,34 @@ class Payv3 extends BasicWePay
         $pay = new Merchantcoupon($this->config->get());
         return $pay->addcoupon($options);
     }
+    
+    /**
+     * 编辑商家券
+     * @Author Cindy
+     * @E-main cindyli@topichina.com.cn
+     * @param  array                    $options  [description]
+     * @param  [type]                   $stock_id [description]
+     * @return [type]                             [description]
+     */
+    public function merchantcoupon_editcoupon(array $options,$stock_id)
+    {
+        $pay = new Merchantcoupon($this->config->get());
+        return $pay->editcoupon($options,$stock_id);
+    }
+    
+    /**
+     * 修改批次预算
+     * @Author Cindy
+     * @E-main cindyli@topichina.com.cn
+     * @param  array                    $options  [description]
+     * @param  [type]                   $stock_id [description]
+     * @return [type]                             [description]
+     */
+    public function merchantcoupon_couponbudget(array $options,$stock_id)
+    {
+        $pay = new Merchantcoupon($this->config->get());
+        return $pay->couponbudget($options,$stock_id);
+    }
 
      /**
      * H5发放代金券
