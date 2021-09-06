@@ -1,5 +1,4 @@
 <?php
-
 namespace WeChat\Contracts;
 
 use WeChat\Exceptions\InvalidArgumentException;

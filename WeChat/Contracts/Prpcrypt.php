@@ -1,5 +1,4 @@
 <?php
-
 /**
  * PKCS7算法 - 加解密
  * Class PKCS7Encoder

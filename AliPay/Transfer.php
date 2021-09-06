@@ -1,6 +1,4 @@
 <?php
-
-
 namespace AliPay;
 
 use WeChat\Contracts\BasicAliPay;

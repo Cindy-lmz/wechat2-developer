@@ -1,6 +1,4 @@
 <?php
-
-
 namespace WeChat\Contracts;
 
 use ArrayAccess;
